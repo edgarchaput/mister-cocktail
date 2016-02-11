@@ -1,0 +1,8 @@
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.error_notification %>
+
+      <%= f.input :description, label:"Entrer la quantité" %>
+      <%= f.input :ingredient_id, label:"Entrer l'ingrédient'", collection: @ingredients %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+
